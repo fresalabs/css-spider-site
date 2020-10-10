@@ -5,7 +5,7 @@ import { Router } from 'react-router-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import history from './history';
-import Content from './src/content'
+import Content from "./css-spider/src/content";
 
 const app = document.createElement('div');
 app.id = 'css-spider-root';
