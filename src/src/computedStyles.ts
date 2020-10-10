@@ -13,26 +13,22 @@ function stylesWithoutDefaults(element: any) {
     const proto: any = Element.prototype;
     const slice = Function.call.bind(Array.prototype.slice);
     const matches = Function.call.bind(proto.matchesSelector ||
-        proto.mozMatchesSelector || proto.webkitMatchesSelector ||
-        proto.msMatchesSelector || proto.oMatchesSelector);
+      proto.mozMatchesSelector || proto.webkitMatchesSelector ||
+      proto.msMatchesSelector || proto.oMatchesSelector);
 
     // Returns true if a DOM Element matches a cssRule
     const elementMatchCSSRule = function(element: any, cssRule: any) {
         return matches(element, cssRule.selectorText);
     };
 
-    console.log(document.styleSheets);
     // Here we get the cssRules across all the stylesheets in one array
     // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
     // @ts-ignore
-    const cssRules = slice(document.styleSheets).reduce(function(rules: any, styleSheet: any) {
-        console.log(rules);
-        return rules.concat(slice(styleSheet.cssRules));
-    }, []);
+    const cssRules = getComputedStyle(element);
 
     const getAppliedCss = function(elm: any) {
         // get only the css rules that matches that element
-        const elementRules = cssRules.filter(elementMatchCSSRule.bind(null, elm));
+        const elementRules = [cssRules].filter(elementMatchCSSRule.bind(null, elm));
         const rules =[];
         if(elementRules.length) {
             for(let i = 0; i < elementRules.length; i++) {

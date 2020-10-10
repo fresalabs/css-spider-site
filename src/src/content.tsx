@@ -79,7 +79,7 @@ class Content extends React.Component<ContentProps, ContentState> {
       <div className={'css-spider-container'}>
         <ActionsBar inspector={this.inspector} />
         {!this.state.hidePopup && (
-          <Popup position={this.state.position}>
+          <Popup target={this.inspector.target}>
             <StylesContent
               element={this.inspector.target}
               values={this.state.styles}

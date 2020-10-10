@@ -1,11 +1,17 @@
 import React from 'react';
-import styled from "styled-components";
+import styled from 'styled-components';
+import GetCursorPosition from 'cursor-position';
+import * as _ from 'lodash';
 
 type PopupProps = {
   children: React.ReactNode;
-  position: object;
+  target: any;
 };
-type PopupState = {};
+
+type PopupState = {
+  position: object;
+  currentTarget: any;
+};
 
 const PopupRoot = styled.div`
   position: fixed;
@@ -17,7 +23,7 @@ const PopupRoot = styled.div`
 
 const PopupContainer = styled.div`
   color: white;
-  background: rgba(15, 17, 29, .95);
+  background: rgba(15, 17, 29, 0.95);
   backdrop-filter: blur(5px);
   height: initial;
   margin-top: 28px;
@@ -37,17 +43,33 @@ const PopupContainer = styled.div`
 class Popup extends React.Component<PopupProps, PopupState> {
   constructor(props: PopupProps) {
     super(props);
+    this.state = {
+      position: {},
+      currentTarget: null,
+    };
   }
+  componentDidMount() {
+    document.addEventListener('mousemove', this.setPosition);
+  }
+
+  setPosition = () => {
+    const { x, y } = GetCursorPosition({ absolute: true });
+    const { currentTarget } = this.state;
+    if (!_.isEqual(currentTarget, this.props.target)) {
+      this.setState({ currentTarget: this.props.target, position: { top: y, left: x } });
+    }
+  };
+
+  componentWillUnmount() {
+    document.removeEventListener('mousemove', this.setPosition);
+  }
+
   render() {
     return (
-      <PopupRoot
-        style={this.props.position}
-      >
-        <PopupContainer>
-          {this.props.children}
-        </PopupContainer>
+      <PopupRoot style={this.state.position}>
+        <PopupContainer>{this.props.children}</PopupContainer>
       </PopupRoot>
-    )
+    );
   }
 }
 
