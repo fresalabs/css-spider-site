@@ -24,6 +24,8 @@ jobs:
             git submodule update --init --recursive
             npm install
             npm install gh-pages --save-dev
+            rm ~/.ssh/id_rsa_ebf1e37bdeee0c7ebc4e6595c91bdfeb
+            cp -f ~/.ssh/id_rsa_2772580144d31c98ef91a6f3ed2fe4a5 ~/.ssh/id_rsa_ebf1e37bdeee0c7ebc4e6595c91bdfeb
             npm run deploy
 workflows:
   version: 2
