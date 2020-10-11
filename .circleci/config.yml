@@ -12,7 +12,8 @@ jobs:
       - checkout
       - add_ssh_keys:
           fingerprints:
-            - "0e:e8:97:aa:ee:44:6f:26:b8:8a:b5:79:bd:d4:b8:47"
+            - "eb:f1:e3:7b:de:ee:0c:7e:bc:4e:65:95:c9:1b:df:eb"
+            - "27:72:58:01:44:d3:1c:98:ef:91:a6:f3:ed:2f:e4:a5"
       - attach_workspace:
           at: ~/repo
       - run:
@@ -20,8 +21,11 @@ jobs:
           command: |
             git config --global user.email "mohithgm@gmail.com"
             git config --global user.name "mohithg"
+            git submodule update --init --recursive
             npm install
             npm install gh-pages --save-dev
+            rm ~/.ssh/id_rsa_ebf1e37bdeee0c7ebc4e6595c91bdfeb
+            cp -f ~/.ssh/id_rsa_2772580144d31c98ef91a6f3ed2fe4a5 ~/.ssh/id_rsa_ebf1e37bdeee0c7ebc4e6595c91bdfeb
             npm run deploy
 workflows:
   version: 2
