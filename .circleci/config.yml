@@ -13,6 +13,7 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - "eb:f1:e3:7b:de:ee:0c:7e:bc:4e:65:95:c9:1b:df:eb"
+            - "27:72:58:01:44:d3:1c:98:ef:91:a6:f3:ed:2f:e4:a5"
       - attach_workspace:
           at: ~/repo
       - run:
