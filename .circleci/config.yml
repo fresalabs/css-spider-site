@@ -31,9 +31,8 @@ workflows:
   version: 2
   test-deploy:
     jobs:
-      - deploy
-#      - :
-#          filters:
-#            branches:
-#              only:
-#                - /releases-.*-next/
+      - deploy:
+          filters:
+            branches:
+              only:
+                - /releases-.*-next/
