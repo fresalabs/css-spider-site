@@ -20,6 +20,7 @@ jobs:
           command: |
             git config --global user.email "mohithgm@gmail.com"
             git config --global user.name "mohithg"
+            git submodule update --init --recursive
             npm install
             npm install gh-pages --save-dev
             npm run deploy
