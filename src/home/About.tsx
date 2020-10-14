@@ -32,7 +32,7 @@ const StyledButton = styled.button`
   background-color: #c2fbd7;
   border-radius: 50px;
   border-width: 0;
-  box-shadow: rgba(25, 25, 25, 0.04) 0 0 1px 0, rgba(0, 0, 0, 0.1) 0 3px 4px 0;
+  box-shadow: none;
   color: green;
   cursor: pointer;
   display: inline-block;
@@ -40,11 +40,13 @@ const StyledButton = styled.button`
   height: 50px;
   padding: 0 25px;
   transition: all 200ms;
+  &:hover {
+    background-color: #afe6c3;
+    transform: scale(1.05);
+  }
 `;
 
-
 class About extends React.Component<any, any> {
-
   injectSpider = () => {
     if (!document.getElementById(cssSpiderRootName)) {
       const app = document.createElement('div');
