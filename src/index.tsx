@@ -2,13 +2,19 @@ import './index.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router } from 'react-router-dom';
+import 'antd/dist/antd.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import history from './history';
-import Content from './css-spider/src/content';
+import { cssSpiderRootName } from './css-spider/src/constants';
 
-const app = document.getElementById('css-spider-root');
-ReactDOM.render(<Content />, app);
+const removeContent = () => {
+  const rootElement = document.getElementById(cssSpiderRootName);
+  rootElement && ReactDOM.unmountComponentAtNode(rootElement);
+  rootElement && rootElement.remove();
+};
+
+removeContent();
 
 ReactDOM.render(
   <React.StrictMode>
