@@ -2,13 +2,23 @@ import './index.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router } from 'react-router-dom';
+import 'antd/dist/antd.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import history from './history';
-import Content from './css-spider/src/content';
+import { cssSpiderRootName } from './css-spider/src/constants';
+import ReactGA from 'react-ga';
 
-const app = document.getElementById('css-spider-root');
-ReactDOM.render(<Content />, app);
+ReactGA.initialize('UA-000000-01');
+ReactGA.pageview(window.location.pathname + window.location.search);
+
+const removeContent = () => {
+  const rootElement = document.getElementById(cssSpiderRootName);
+  rootElement && ReactDOM.unmountComponentAtNode(rootElement);
+  rootElement && rootElement.remove();
+};
+
+removeContent();
 
 ReactDOM.render(
   <React.StrictMode>
