@@ -85,7 +85,7 @@ class About extends React.Component<any, any> {
         </FirstContainer>
         <SecondContainer>
           <StyledButton onClick={this.injectSpider}>
-              <img src={CSSSpiderIcon} />
+              <img src={CSSSpiderIcon} alt="logo"/>
             Try it your self on this page
           </StyledButton>
         </SecondContainer>

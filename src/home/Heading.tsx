@@ -27,7 +27,7 @@ class Heading extends React.Component<any, any> {
     return (
       <HeadingContainer>
         <IconContainer>
-          <img src={CSSSpiderIcon} />
+          <img src={CSSSpiderIcon} alt="logo"/>
         </IconContainer>
         <div>CSS Spider</div>
       </HeadingContainer>

@@ -48,14 +48,6 @@ class PlatForm extends React.Component<any, any> {
             src="https://d33wubrfki0l68.cloudfront.net/aa7efc39f40fa36a2a8bcd17944a00c640dab9b6/d840e/img/logos/chrome.png"
             alt="Chrome logo"
           />
-          <img
-            src="https://d33wubrfki0l68.cloudfront.net/6344775540237d8e39df3e0a0b44e69a5f1d6942/05ea9/img/logos/firefox.png"
-            alt="Firefox logo"
-          />
-          <img
-            src="https://d33wubrfki0l68.cloudfront.net/dae22dc10f3acb31b716d89e3ec0fdd7d6cabbcb/abd46/img/logos/safari.png"
-            alt="Firefox logo"
-          />
         </LogoContainer>
       </Container>
     );
