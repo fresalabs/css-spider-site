@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import styled from 'styled-components';
 import Content from '../css-spider/src/content';
 import { cssSpiderRootName } from '../css-spider/src/constants';
@@ -28,18 +29,21 @@ const FirstContainer = styled.div`
 const SecondContainer = styled.div`
   flex-basis: 40%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
 ]`;
 
 const StyledButton = styled.button`
+  display: flex;
+  align-items: center;
   background-color: #c2fbd7;
   border-radius: 50px;
   border-width: 0;
   box-shadow: none;
   color: green;
   cursor: pointer;
-  display: inline-block;
-  font-size: 1em;
+  font-size: 16px;
   height: 50px;
   padding: 0 25px;
   animation: 3s pulse infinite;
@@ -60,6 +64,7 @@ const StyledButton = styled.button`
     margin-right: 4px;
   }
 `;
+
 
 class About extends React.Component<any, any> {
   injectSpider = () => {
@@ -85,9 +90,13 @@ class About extends React.Component<any, any> {
         </FirstContainer>
         <SecondContainer>
           <StyledButton onClick={this.injectSpider}>
-              <img src={CSSSpiderIcon} alt="logo"/>
+            <img src={CSSSpiderIcon} alt="logo" />
             Try it your self on this page
           </StyledButton>
+            <StyledButton onClick={() => window.open('https://gum.co/CpAKX', "_blank")}>
+              <AddShoppingCartIcon /><div>Download</div>
+            </StyledButton>
+
         </SecondContainer>
       </FeaturesContainer>
     );

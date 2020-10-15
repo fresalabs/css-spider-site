@@ -9,7 +9,7 @@ import history from './history';
 import { cssSpiderRootName } from './css-spider/src/constants';
 import ReactGA from 'react-ga';
 
-ReactGA.initialize('UA-000000-01');
+ReactGA.initialize('UA-180565352-1');
 ReactGA.pageview(window.location.pathname + window.location.search);
 
 const removeContent = () => {
