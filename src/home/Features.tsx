@@ -46,7 +46,7 @@ class Features extends React.Component<any, any> {
         icon: <SafetyCertificateOutlined style={{ fontSize: 33, color: '#1890ff' }} />,
         heading: 'The smartest browser extension for CSS inspection',
         description:
-          'No unuseful, duplicated or longhand CSS. CSS Scan uses the same technology used by Google and Github with our own improvements to quickly clean any CSS trash for you. Precise, shorthanded and advanced optimizations.',
+          'No unuseful, duplicated or longhand CSS. CSS Spider uses the same technology used by Google and Github with our own improvements to quickly clean any CSS trash for you. Precise, shorthanded and advanced optimizations.',
       },
       {
         icon: <ClockCircleTwoTone style={{ fontSize: 33, color: '#1890ff' }} />,
@@ -63,7 +63,7 @@ class Features extends React.Component<any, any> {
         icon: <CheckCircleOutlined style={{ fontSize: 33, color: '#1890ff' }} />,
         heading: 'Copy any element you want',
         description:
-          "If you want to copy the CSS of this element right now, it's a pain. With CSS Scan, you just click, and it's yours. Create your perfect page.",
+          "If you want to copy the CSS of this element right now, it's a pain. With CSS Spider, you just click, and it's yours. Create your perfect page.",
       },
     ];
 

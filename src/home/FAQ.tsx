@@ -52,7 +52,7 @@ class FAQ extends React.Component<any, any> {
           </div>
             <div>
               <details>
-                <summary>How can I pause the scan?</summary>
+                <summary>How can I pause the Spider?</summary>
                 <p>Click on the button "Pause" or simply press the Shift key.</p>
               </details>
             </div>
