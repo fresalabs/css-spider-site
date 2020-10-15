@@ -3,11 +3,12 @@ import ReactDOM from 'react-dom';
 import styled from 'styled-components';
 import Content from '../css-spider/src/content';
 import { cssSpiderRootName } from '../css-spider/src/constants';
+import CSSSpiderIcon from '../icons/logo.png';
 
 const FeaturesContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 0 15%;
+  padding: 0 25%;
 `;
 
 const FirstContainer = styled.div`
@@ -26,7 +27,9 @@ const FirstContainer = styled.div`
 
 const SecondContainer = styled.div`
   flex-basis: 40%;
-`;
+  display: flex;
+  justify-content: center;
+]`;
 
 const StyledButton = styled.button`
   background-color: #c2fbd7;
@@ -39,10 +42,22 @@ const StyledButton = styled.button`
   font-size: 1em;
   height: 50px;
   padding: 0 25px;
+  animation: 3s pulse infinite;
+  @keyframes pulse {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.2);
+    }
+  }
   transition: all 200ms;
-  &:hover {
-    background-color: #afe6c3;
-    transform: scale(1.05);
+  img {
+    width: 24px;
+    height: 24px;
+    background-color: #c2fbd7;
+    border-radius: 20px;
+    margin-right: 4px;
   }
 `;
 
@@ -69,7 +84,10 @@ class About extends React.Component<any, any> {
           </span>
         </FirstContainer>
         <SecondContainer>
-          <StyledButton onClick={this.injectSpider}>Try it your self on this page</StyledButton>
+          <StyledButton onClick={this.injectSpider}>
+              <img src={CSSSpiderIcon} />
+            Try it your self on this page
+          </StyledButton>
         </SecondContainer>
       </FeaturesContainer>
     );

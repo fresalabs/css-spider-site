@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import CSSSpiderIcon from '../icons/CSSSpider';
+import CSSSpiderIcon from '../icons/logo.png';
 
 const HeadingContainer = styled.h3`
   color: #800080;
@@ -16,6 +16,10 @@ const HeadingContainer = styled.h3`
 const IconContainer = styled.div`
   height: 50px;
   margin-right: 10px;
+  img {
+    width: 40px;
+    height: 40px;
+  }
 `;
 
 class Heading extends React.Component<any, any> {
@@ -23,7 +27,7 @@ class Heading extends React.Component<any, any> {
     return (
       <HeadingContainer>
         <IconContainer>
-          <CSSSpiderIcon />
+          <img src={CSSSpiderIcon} />
         </IconContainer>
         <div>CSS Spider</div>
       </HeadingContainer>
