@@ -1,11 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Row, Col } from 'antd';
-import { Input } from 'antd';
 import AboutTheCompany from './AboutTheCompany';
 import WaveBorder from './WaveBorder';
-
-const { TextArea } = Input;
 
 const StyledButton = styled.button`
   margin-top: 16px;
@@ -34,8 +31,9 @@ class Footer extends React.Component {
         <WaveBorder upperColor="#FFFFFF" lowerColor="#000000" animationNegativeDelay={4} />
         <Row>
           <StyledCol span={12}>
-            <TextArea rows={5} placeholder="Get in touch with us" />
-            <StyledButton>Send Message</StyledButton>
+            <a href="mailto:admin@fresalabs.com">
+              <StyledButton>Email us!</StyledButton>
+            </a>
           </StyledCol>
           <StyledCol span={12}>
             <AboutTheCompany />
