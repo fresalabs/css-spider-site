@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import FavoriteIcon from '@material-ui/icons/Favorite';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import styled from 'styled-components';
 import Content from '../css-spider/src/content';
@@ -44,7 +45,7 @@ const StyledButton = styled.button`
   color: green;
   cursor: pointer;
   font-size: 16px;
-  height: 50px;
+  height: 40px;
   padding: 0 25px;
   animation: 3s pulse infinite;
   @keyframes pulse {
@@ -64,7 +65,6 @@ const StyledButton = styled.button`
     margin-right: 4px;
   }
 `;
-
 
 class About extends React.Component<any, any> {
   injectSpider = () => {
@@ -93,10 +93,21 @@ class About extends React.Component<any, any> {
             <img src={CSSSpiderIcon} alt="logo" />
             Try it your self on this page
           </StyledButton>
-            <StyledButton onClick={() => window.open('https://gum.co/CpAKX', "_blank")}>
-              <AddShoppingCartIcon /><div>Download</div>
-            </StyledButton>
-
+          <StyledButton onClick={() => window.open('https://gum.co/CpAKX', '_blank')}>
+            <FavoriteIcon />
+            Buy me a Coffee?
+          </StyledButton>
+          <StyledButton
+            onClick={() =>
+              window.open(
+                'https://chrome.google.com/webstore/detail/css-spider/eneakgbflmejjpkogbdmebjbfcdebjik?hl=en&authuser=1',
+                '_blank'
+              )
+            }
+          >
+            <AddShoppingCartIcon />
+            <div>Download</div>
+          </StyledButton>
         </SecondContainer>
       </FeaturesContainer>
     );
