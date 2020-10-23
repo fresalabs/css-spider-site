@@ -5,6 +5,7 @@ import Features from './Features';
 import PlatForm from './PlatForm';
 import FAQ from './FAQ';
 import Footer from './Footer';
+import Youtube from './Youtube';
 
 class Home extends React.Component<{}> {
   render() {
@@ -13,6 +14,7 @@ class Home extends React.Component<{}> {
         <Heading />
         <About />
         <Features />
+        <Youtube />
         <PlatForm />
         <FAQ />
         <Footer />
