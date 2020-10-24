@@ -82,10 +82,10 @@ class About extends React.Component<any, any> {
     return (
       <FeaturesContainer>
         <FirstContainer>
-          <p>The fastest and easiest way to check, copy and edit CSS</p>
+          <p>The quickest and convenient way to copy, visualize, edit and export CSS.</p>
           <span>
-            Goodbye to "Inspect Element" — Check the CSS of any element you hover over, instantly, and copy its entire
-            rules with a single click.
+            Farewell to "Inspect Element" — Check the CSS of any element you hover, immediately, and copy, export to codepen all its
+            rules with a click.
           </span>
         </FirstContainer>
         <SecondContainer>

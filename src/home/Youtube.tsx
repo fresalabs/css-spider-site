@@ -26,6 +26,7 @@ class Youtube extends React.Component<any, any> {
       <StyledDiv>
         <h1>Say Good bye to "Inspect Element"</h1>
         <iframe
+          title="youtube  link"
           src="https://www.youtube.com/embed/j7a-ku_BB3s"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
