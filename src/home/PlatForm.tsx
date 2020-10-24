@@ -40,8 +40,7 @@ class PlatForm extends React.Component<any, any> {
         <Heading>Works everywhere. On every website.</Heading>
         <Description>
           Wordpress, Wix, Squarespace, Shopify, React, etc. CSS Spider runs on the browser as an extension so it works on
-          any website, any theme and even works offline! Choose your favorite: Chrome, Firefox, and Safari. Internet
-          Explorer maybe never.
+          any website, any theme and even works offline! Choose your favorite: Chrome.
         </Description>
         <LogoContainer>
           <img
