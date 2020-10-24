@@ -44,26 +44,25 @@ class Features extends React.Component<any, any> {
     const features: Array<{ icon: React.ReactNode; heading: string; description: any }> = [
       {
         icon: <SafetyCertificateOutlined style={{ fontSize: 33, color: '#1890ff' }} />,
-        heading: 'The smartest browser extension for CSS inspection',
+        heading: 'The most clever browser extension for CSS',
         description:
-          'No unuseful, duplicated or longhand CSS. CSS Spider uses the same technology used by Google and Github with our own improvements to quickly clean any CSS trash for you. Precise, shorthanded and advanced optimizations.',
+          'CSS Spider uses the same technology used in Google Chrome with more improvements to help you quickly and precisely get CSS for any element.',
       },
       {
         icon: <ClockCircleTwoTone style={{ fontSize: 33, color: '#1890ff' }} />,
-        heading: 'Easy and lightspeed inspection',
+        heading: 'Easy and fastest inspection',
         description: (
           <>
-            Understand how everything works without wasting time hunting through infinite CSS rules on the browsers' Dev
-            Tools. <br /> Get all the active styles on the fly and finish your work faster. <br /> Use shortcuts to work
-            with it even quickier.
+            Its very painful to iterate the DOM over many elements and hunting the CSS on the browsers' Dev
+            Tools (aka inspect element). <br /> Now, you can get all the styles on the fly for any element and be more productive.
           </>
         ),
       },
       {
         icon: <CheckCircleOutlined style={{ fontSize: 33, color: '#1890ff' }} />,
-        heading: 'Copy any element you want',
+        heading: 'Copy and export any element you want',
         description:
-          "If you want to copy the CSS of this element right now, it's a pain. With CSS Spider, you just click, and it's yours. Create your perfect page.",
+          "If you want to copy and export to Codepen, the CSS of any element now, you just click, and see the magic that CSS Spider does for you.",
       },
     ];
 

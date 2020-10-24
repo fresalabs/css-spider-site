@@ -24,7 +24,7 @@ class Youtube extends React.Component<any, any> {
   render() {
     return (
       <StyledDiv>
-        <h1>Say Good bye to "Inspect Element"</h1>
+        <h1>Wave Farewell to "Inspect Element/ Browser dev tools"</h1>
         <iframe
           title="youtube  link"
           src="https://www.youtube.com/embed/j7a-ku_BB3s"

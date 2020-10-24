@@ -43,17 +43,17 @@ class FAQ extends React.Component<any, any> {
         <StyledDiv>
           <div>
             <details>
-              <summary>Can I edit the CSS?</summary>
+              <summary>Can I edit the CSS inline?</summary>
               <p>
-                Yes! Press the space bar, click on the CSS code inside the window and try to change it. You'll see all
-                the changes in real-time!
+                Ofcourse you can! Press the space bar, click on the CSS code inside the popup window and try to change it. You'll see all
+                the changes in real-time getting applied to your HTML element!
               </p>
             </details>
           </div>
             <div>
               <details>
                 <summary>How can I pause the Spider?</summary>
-                <p>Click on the button "Pause" or simply press the Shift key.</p>
+                <p>Click on the button "Pause"</p>
               </details>
             </div>
         </StyledDiv>
