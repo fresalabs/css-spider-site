@@ -18,12 +18,22 @@ const Description = styled.div`
   line-height: 1.5;
 `;
 
+const StyledLink  = styled.a`
+  margin: 0 4px;
+`;
+
 class AboutTheCompany extends React.Component {
   render() {
     return (
       <div>
         <Header>About the Company</Header>
-        <Description>Product belongs to 'FresaLabs' software for everyone.</Description>
+        <Description>
+          Product belongs to
+          <StyledLink href="http://fresalabs.com/" target="_blank">
+            FresaLabs
+          </StyledLink>
+          software for everyone.
+        </Description>
       </div>
     );
   }
