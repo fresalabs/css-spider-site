@@ -1,7 +1,8 @@
 import React from 'react';
 import * as R from 'ramda';
+// @ts-ignore
+import { Zoom, Flip, Rotate } from 'react-reveal';
 import { SafetyCertificateOutlined, ClockCircleTwoTone, CheckCircleOutlined } from '@ant-design/icons';
-
 import styled from 'styled-components';
 
 const FeaturesContainer = styled.div`
@@ -53,8 +54,8 @@ class Features extends React.Component<any, any> {
         heading: 'Easy and fastest inspection',
         description: (
           <>
-            Its very painful to iterate the DOM over many elements and hunting the CSS on the browsers' Dev
-            Tools (aka inspect element). <br /> Now, you can get all the styles on the fly for any element and be more productive.
+            Its very painful to iterate the DOM over many elements and hunting the CSS on the browsers' Dev Tools (aka
+            inspect element). <br /> Now, you can get all the styles on the fly for any element and be more productive.
           </>
         ),
       },
@@ -62,25 +63,29 @@ class Features extends React.Component<any, any> {
         icon: <CheckCircleOutlined style={{ fontSize: 33, color: '#1890ff' }} />,
         heading: 'Copy and export any element you want',
         description:
-          "If you want to copy and export to Codepen, the CSS of any element now, you just click, and see the magic that CSS Spider does for you.",
+          'If you want to copy and export to Codepen, the CSS of any element now, you just click, and see the magic that CSS Spider does for you.',
       },
     ];
 
     return (
       <FeaturesContainer>
         <h1>Features</h1>
-        <StyledDiv>
-          {R.map(
-            (feature) => (
-              <Feature>
-                {feature.icon}
-                <h2>{feature.heading}</h2>
-                <p>{feature.description}</p>
-              </Feature>
-            ),
-            features
-          )}
-        </StyledDiv>
+        <Zoom>
+          <StyledDiv>
+            {R.map(
+              (feature) => (
+                <Feature>
+                  <Rotate>
+                    {feature.icon}
+                    <h2>{feature.heading}</h2>
+                    <p>{feature.description}</p>
+                  </Rotate>
+                </Feature>
+              ),
+              features
+            )}
+          </StyledDiv>
+        </Zoom>
       </FeaturesContainer>
     );
   }

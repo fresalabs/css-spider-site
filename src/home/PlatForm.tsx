@@ -41,12 +41,16 @@ class PlatForm extends React.Component<any, any> {
         <Description>
           Wordpress, Wix, Squarespace, Shopify, React, etc. CSS Spider runs on the browser as an extension so it works on
           any website, any theme and also works offline! <br />
-          Right now we support Google Chrome. We will support firefox and Safari soon!
+          Right now we support Google Chrome, Firefox. We will support Safari soon!
         </Description>
         <LogoContainer>
           <img
             src="https://d33wubrfki0l68.cloudfront.net/aa7efc39f40fa36a2a8bcd17944a00c640dab9b6/d840e/img/logos/chrome.png"
             alt="Chrome logo"
+          />
+          <img
+            src="https://d33wubrfki0l68.cloudfront.net/6344775540237d8e39df3e0a0b44e69a5f1d6942/05ea9/img/logos/firefox.png"
+            alt="Firefox logo"
           />
         </LogoContainer>
       </Container>

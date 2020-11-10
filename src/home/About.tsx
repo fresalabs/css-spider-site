@@ -1,11 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import FavoriteIcon from '@material-ui/icons/Favorite';
+import { Menu } from 'antd';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import styled from 'styled-components';
 import Content from '../css-spider/src/content';
 import { cssSpiderRootName } from '../css-spider/src/constants';
 import CSSSpiderIcon from '../icons/logo.png';
+
+const { SubMenu } = Menu;
 
 const FeaturesContainer = styled.div`
   display: flex;
@@ -66,6 +69,13 @@ const StyledButton = styled.button`
   }
 `;
 
+const StyledMenu = styled(Menu)`
+  border: none;
+ .ant-menu-submenu-arrow {
+  display: none;
+ }
+`;
+
 class About extends React.Component<any, any> {
   injectSpider = () => {
     if (!document.getElementById(cssSpiderRootName)) {
@@ -79,13 +89,36 @@ class About extends React.Component<any, any> {
   };
 
   render() {
+    const menu = (
+      <Menu>
+        <Menu.Item>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://chrome.google.com/webstore/detail/css-spider/eneakgbflmejjpkogbdmebjbfcdebjik?hl=en&authuser=1"
+          >
+            Download for Chrome
+          </a>
+        </Menu.Item>
+        <Menu.Item>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://addons.mozilla.org/en-GB/firefox/addon/css-spider/"
+          >
+            Download for Firefox
+          </a>
+        </Menu.Item>
+      </Menu>
+    );
+
     return (
       <FeaturesContainer>
         <FirstContainer>
           <p>The quickest and convenient way to copy, visualize, edit and export CSS.</p>
           <span>
-            Farewell to "Inspect Element/ Browser Dev Tools" — View the CSS of any element you hover, immediately, and copy, export to codepen all its
-            rules with a click.
+            Farewell to "Inspect Element/ Browser Dev Tools" — View the CSS of any element you hover, immediately, and
+            copy, export to codepen all its rules with a click.
           </span>
         </FirstContainer>
         <SecondContainer>
@@ -97,17 +130,19 @@ class About extends React.Component<any, any> {
             <FavoriteIcon />
             Buy me a Coffee?
           </StyledButton>
-          <StyledButton
-            onClick={() =>
-              window.open(
-                'https://chrome.google.com/webstore/detail/css-spider/eneakgbflmejjpkogbdmebjbfcdebjik?hl=en&authuser=1',
-                '_blank'
-              )
-            }
-          >
-            <AddShoppingCartIcon />
-            <div>Download</div>
-          </StyledButton>
+          <StyledMenu mode="vertical">
+            <SubMenu
+              key="sub1"
+              title={
+                <StyledButton>
+                  <AddShoppingCartIcon />
+                  <div>Download</div>
+                </StyledButton>
+              }
+            >
+              {menu}
+            </SubMenu>
+          </StyledMenu>
         </SecondContainer>
       </FeaturesContainer>
     );
