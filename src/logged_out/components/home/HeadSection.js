@@ -123,7 +123,7 @@ function HeadSection(props) {
                         <Typography
                           variant={isWidthUp("lg", width) ? "h3" : "h4"}
                         >
-                         Hover on an element and you have the styles
+                          CSS editing on speed dial
                         </Typography>
                       </Box>
                       <div>
@@ -152,7 +152,7 @@ function HeadSection(props) {
                   <Hidden smDown>
                     <Grid item md={6}>
                       <ZoomImage
-                        src={`${process.env.PUBLIC_URL}/images/logged_out/headerImage.jpg`}
+                        src={`https://user-images.githubusercontent.com/4549937/99323946-2c879380-2841-11eb-9dc9-554f18d04cda.png`}
                         className={classes.image}
                         alt="header example"
                       />
