@@ -132,8 +132,8 @@ function HeadSection(props) {
                             variant={isWidthUp("lg", width) ? "h6" : "body1"}
                             color="textSecondary"
                           >
-                            Lorem ipsum dolor sit amet, consetetur sadipscing
-                            elitr, sed diam nonumy eirmod tempor invidunt
+                           Let's breakup with "Inspect Element", there is a better way to view, modify and test CSS rules on your browser.
+                           Simply hover over any element to view its CSS rules and edit them on the fly. 
                           </Typography>
                         </Box>
                         <Button
@@ -144,7 +144,7 @@ function HeadSection(props) {
                           classes={{ label: classes.extraLargeButtonLabel }}
                           href="https://github.com/dunky11/react-saas-template"
                         >
-                          Download from GitHub
+                          Click me to see the magic
                         </Button>
                       </div>
                     </Box>
