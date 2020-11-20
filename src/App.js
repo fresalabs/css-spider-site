@@ -6,7 +6,7 @@ import GlobalStyles from "./GlobalStyles";
 import * as serviceWorker from "./serviceWorker";
 import Pace from "./shared/components/Pace";
 
-const LoggedOutComponent = lazy(() => import("./logged_out/components/Main"));
+const CssSpiderSite = lazy(() => import("./logged_out/components/Main"));
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
         <Suspense fallback={<Fragment />}>
           <Switch>
             <Route>
-              <LoggedOutComponent />
+              <CssSpiderSite />
             </Route>
           </Switch>
         </Suspense>
