@@ -68,15 +68,6 @@ function NavBar(props) {
             </Typography>
           </div>
           <div>
-            <Hidden mdUp>
-              <IconButton
-                className={classes.menuButton}
-                onClick={handleMobileDrawerOpen}
-                aria-label="Open Navigation"
-              >
-                <MenuIcon color="primary" />
-              </IconButton>
-            </Hidden>
             <Hidden smDown>
               {menuItems.map(element => {
                 if (element.link) {

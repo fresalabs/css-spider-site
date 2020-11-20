@@ -57,7 +57,7 @@ const features = [
 function FeatureSection(props) {
   const { width } = props;
   return (
-    <div style={{ backgroundColor: "#FFFFFF" }}>
+    <div style={{paddingBottom: '10%', backgroundColor: "#FFFFFF" }}>
       <div className="container-fluid lg-p-top">
         <Typography variant="h3" align="center" className="lg-mg-bottom">
           Features
